@@ -1,0 +1,27 @@
+/* CSS for the sidebar */
+.sidebar {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #a24762;
+    overflow-x: hidden;
+    padding-top: 20px;
+    box-shadow: 1px 1px 2px rgb(228, 1, 240), 0 0 35px rgb(231, 61, 253), 0 0 5px rgb(255, 7, 189);
+  }
+  .sidebar a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+  }
+  .sidebar a:hover {
+    color: #f1f1f1;
+  }
+  .main {
+    margin-left: 200px;
+    padding: 0px 10px;
+  }
