@@ -202,3 +202,11 @@ body{
     transition: max-height 0.4s ease-out;
     opacity: 1;
   }
+
+  .apps{
+    opacity: 0.7;
+  }
+  .apps:hover{
+    opacity: 1;
+    transition: 0.4s;
+  }
