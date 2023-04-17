@@ -1,6 +1,7 @@
 body{
-    background: url(image/bg.jpg);
-    background-size:cover;
+  color: #000000;
+  background: url(image/blbg.png);
+  background-size:cover;
 }
 
 .title{
