@@ -1,25 +1,21 @@
 body {
   background-color: #F5F5F5;
   font-family: Arial, sans-serif;
-  background: url(image/bg.jpg);
-  background-size:cover;
+  background: url(image/bgforsignup.jpg);
+    background-size:cover;
 }
 .container {
-  margin: 0 auto;
-  width: 400px;
-  background-color: #FFFFFF;
+  background-color: #245082;
   border-radius: 8px;
   box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
   padding: 30px;
   margin-top: 50px;
   text-align: left;
 }
-h1 {
-  font-size: 32px;
-  color: #333333;
-  margin-top: 0;
-  text-align: center;
+.formlabel{
+  color: #F5F5F5;
 }
+
 input[type="text"], input[type="email"], input[type="password"] {
   width: 100%;
   padding: 12px 20px;
@@ -31,7 +27,7 @@ input[type="text"], input[type="email"], input[type="password"] {
   outline: none;
 }
 input[type="submit"] {
-  background-color: #4CAF50;
+  background-color: #51af4c;
   color: white;
   padding: 12px 20px;
   border: none;
