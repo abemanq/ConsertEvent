@@ -10,8 +10,6 @@
 
             session_start();
 
-            $userid
-
             if (isset($uname) && isset($pwd)) {
                 function validate($data){
                    $data = trim($data);

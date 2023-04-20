@@ -1,4 +1,8 @@
 /* CSS for the sidebar */
+body{
+  background-color: #4d555c;
+}
+
 .sidebar {
   height: 100%;
   width: 200px;
@@ -6,7 +10,7 @@
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #466345;
+  background-color: #ddc302;
   overflow-x: hidden;
   padding-top: 20px;
   box-shadow: 1px 1px 2px rgb(0, 0, 0), 0 0 35px rgb(12, 10, 13), 0 0 5px rgb(21, 20, 21);
@@ -19,7 +23,7 @@
   display: block;
 }
 .sidebar a:hover {
-  color: #f1f1f1;
+  color: #0a0a13;
 }
 
 .sideprofile{
@@ -58,7 +62,7 @@
   .topbar{
     width: 100%;
     height: 80px;
-    background-color: #015329;
+    background-color: #000c06;
     margin: 0;
     top: 0;
     position: absolute;
@@ -67,59 +71,8 @@
   .activate{
       color: white;
   }
-  .firstbox{
-      float: left;
-      height: 350px;
-      width: 350px;
-      background-color: #5689c7;
-      border-radius: 30px;
-      margin-left: 250px;
-  }
-  
-.secbox {
-    float: left;
-    height: 350px;
-    width: 350px;
-    background-color: #5689c7;
-    margin-left: 40px;
-    border-radius: 30px;
-}
-
-.thirdbox{
-    float: left;
-    height: 350px;
-    width: 350px;
-    background-color: #5689c7;
-    margin-left: 40px;
-    border-radius: 30px;
-}
 
 @media screen and (max-width: 800px) {
-    .firstbox{
-    float: left;
-    height: 350px;
-    width: 350px;
-    background-color: #fa7be7;
-    border-radius: 30px;
-}
-
-.secbox {
-    float: left;
-    height: 350px;
-    width: 350px;
-    background-color: #fa7be7;
-    margin-top: 40px;
-    border-radius: 30px;
-}
-
-.thirdbox{
-    float: left;
-    height: 350px;
-    width: 350px;
-    background-color: #fa7be7;
-    margin-top: 40px;
-    border-radius: 30px;
-}
 }
 
 .button {
