@@ -13,16 +13,19 @@
             $upnum= $_POST["pnum"];
             $qty = $_POST["tix"];
             $usr = $_SESSION['username'];
+            
             // make query
-            $sql = "INSERT INTO customers (FullName, LastName, Email, Pnum, Qty,username) VALUES ('$fname', '$lname', '$uemail', '$upnum', '$qty', '$usr')";
+            $sql = "INSERT INTO customers (FullName, LastName, Email, Pnum, Qty,username, userid) VALUES ('$fname', '$lname', '$uemail', '$upnum', '$qty', '$usr')";
 
             //connect query into database
             $result = mysqli_query($conn, $sql);
 
             if($result)
                 ECHO "YOU SUCCESFULL PURCHASE THE TICKET";
-            else
+            else{
                 ECHO "You Failed to Purchase the ticket";
+                echo mysqli_error();
+            }
         ?>
     </body>
 </html>
