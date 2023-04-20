@@ -94,6 +94,22 @@ body{
     margin-top: 400px;
 }
 
+.sideprofile{
+  position: absolute;
+  z-index: index 1;
+  margin: 0px;
+  padding: 0px;
+  right: 0em;
+}
+
+.sideimg{
+  width:3%; 
+  border-radius: 30px;
+  margin-right: 12px;
+  opacity: 0.8;
+  border: 6px solid #f1f1f1;
+}
+
 /* CSS */
 .button-28 {
   appearance: none;

@@ -1,0 +1,445 @@
+body{
+    color: #000000;
+    background: url(/image/blbg.png);
+    background-size:cover;
+  }
+  .title{
+      margin-top: 0.8em;
+      margin-bottom: 0.8em;
+      color: aliceblue;
+      text-shadow: 2px 0px 7px #000000;
+      font-size: 50px;
+  }
+  
+  .navbar .navbar-nav .nav-link {
+      color: #000000;
+      font-size: 1.1em;
+  }
+  .navbar .navbar-nav .nav-link:hover{
+      color: #808080;
+  }
+  .navbar-logo-centered .navbar-nav .nav-link{
+      padding: 1em 1em;
+  }
+  .navbar-nav{
+      align-items: center;
+  }
+  .navbar .navbar-nav .nav-link{
+      color: rgb(0, 0, 0);
+      font-size: 1.1em;
+      padding:0 1em;
+  }
+  
+  .nav-item{
+      padding-left:1em ;
+      padding-right:1em ;
+  }
+  
+  .button{
+      padding-right: 1em;
+  }
+  
+  .btn{
+      background-color: rgb(255, 255, 255);
+  }
+  .img-fluid{
+      width: 2500px;
+      height: auto;
+  }
+  .white-box {
+      background-color: rgb(255, 255, 255);
+      height: 160px;
+      width: 100em;
+      border-radius: 40px;
+      text-align: center;
+  }
+  .text-in-box{
+      color: rgb(2, 30, 152);
+      align-content: center;
+  }
+
+  .sideprofile{
+    position: absolute;
+    z-index: index 1;
+    margin: 0px;
+    padding: 0px;
+    right: 0em;
+  }
+  
+  .sideimg{
+    width:3%; 
+    border-radius: 30px;
+    margin-right: 12px;
+    opacity: 0.8;
+    border: 6px solid #f1f1f1;
+  }
+  
+  
+  /* ==========================================================================
+     #FONT
+     ========================================================================== */
+     .font-robo {
+      font-family: "Roboto", "Arial", "Helvetica Neue", sans-serif;
+    }
+    
+    /* ==========================================================================
+       #GRID
+       ========================================================================== */
+    .row {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+    }
+    
+    .row-space {
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+      -moz-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+    }
+    
+    .col-2 {
+      width: -webkit-calc((100% - 60px) / 2);
+      width: -moz-calc((100% - 60px) / 2);
+      width: calc((100% - 60px) / 2);
+    }
+    
+    @media (max-width: 767px) {
+      .col-2 {
+        width: 100%;
+      }
+    }
+    
+    /* ==========================================================================
+       #BOX-SIZING
+       ========================================================================== */
+    /**
+     * More sensible default box-sizing:
+     * css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice
+     */
+    html {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+    
+    * {
+      padding: 0;
+      margin: 0;
+    }
+    
+    *, *:before, *:after {
+      -webkit-box-sizing: inherit;
+      -moz-box-sizing: inherit;
+      box-sizing: inherit;
+    }
+    
+    /* ==========================================================================
+       #RESET
+       ========================================================================== */
+    /**
+     * A very simple reset that sits on top of Normalize.css.
+     */
+    body,
+    h1, h2, h3, h4, h5, h6,
+    blockquote, p, pre,
+    dl, dd, ol, ul,
+    figure,
+    hr,
+    fieldset, legend {
+      margin: 0;
+      padding: 0;
+    }
+    
+    /**
+     * Remove trailing margins from nested lists.
+     */
+    li > ol,
+    li > ul {
+      margin-bottom: 0;
+    }
+    
+    /**
+     * Remove default table spacing.
+     */
+    table {
+      border-collapse: collapse;
+      border-spacing: 0;
+    }
+    
+    /**
+     * 1. Reset Chrome and Firefox behaviour which sets a `min-width: min-content;`
+     *    on fieldsets.
+     */
+    fieldset {
+      min-width: 0;
+      /* [1] */
+      border: 0;
+    }
+    
+    button {
+      outline: none;
+      background: none;
+      border: none;
+    }
+    
+    /* ==========================================================================
+       #PAGE WRAPPER
+       ========================================================================== */
+    .page-wrapper {
+      min-height: 100vh;
+    }
+    
+    body {
+      font-family: "Roboto", "Arial", "Helvetica Neue", sans-serif;
+      font-weight: 400;
+      font-size: 14px;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+      font-weight: 400;
+    }
+    
+    h1 {
+      font-size: 36px;
+    }
+    
+    h2 {
+      font-size: 30px;
+    }
+    
+    h3 {
+      font-size: 24px;
+    }
+    
+    h4 {
+      font-size: 18px;
+    }
+    
+    h5 {
+      font-size: 15px;
+    }
+    
+    h6 {
+      font-size: 13px;
+    }
+    /* ==========================================================================
+       #SPACING
+       ========================================================================== */
+    .p-t-100 {
+      padding-top: 100px;
+    }
+    
+    .p-t-20 {
+      padding-top: 20px;
+    }
+    
+    .p-b-100 {
+      padding-bottom: 100px;
+    }
+    
+    /* ==========================================================================
+       #WRAPPER
+       ========================================================================== */
+    .wrapper {
+      margin: 0 auto;
+    }
+    
+    .wrapper--w680 {
+      max-width: 680px;
+    }
+    
+    /* ==========================================================================
+       #BUTTON
+       ========================================================================== */
+    .btn {
+      line-height: 40px;
+      display: inline-block;
+      padding: 0 25px;
+      cursor: pointer;
+      font-family: "Roboto", "Arial", "Helvetica Neue", sans-serif;
+      color: #fff;
+      -webkit-transition: all 0.4s ease;
+      -o-transition: all 0.4s ease;
+      -moz-transition: all 0.4s ease;
+      transition: all 0.4s ease;
+      font-size: 14px;
+      font-weight: 700;
+    }
+    
+    .btn--radius {
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      border-radius: 20px;
+    }
+    
+    .btn--green {
+      background: #6c6b6b;
+    }
+  
+    .btn--blue {
+      background: #6c6b6b;
+    }
+    
+    .btn--green:hover {
+      background: #42de42;
+      color: #fff;
+    }
+  
+    .btn--blue:hover {
+      background: #1414f1;
+      color: #fff;
+    }
+  
+    .butang{
+      position: relative;
+      padding-top: 30px;
+      padding-left: 25px;
+    }
+  
+    .cancel{
+      position: relative;
+      padding-top: 30px;
+      padding-left:16px;
+      
+    }
+    /* ==========================================================================
+       #FORM
+       ========================================================================== */
+    input {
+      outline: none;
+      margin: 0;
+      border: none;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none;
+      width: 100%;
+      font-size: 14px;
+      font-family: inherit;
+    }
+    
+    .input-group {
+      position: relative;
+      margin-bottom: 30px;
+      border-bottom: 1px solid #ccc;
+    }
+    
+    .input-group2 {
+      position: relative;
+      margin-bottom: 50px;
+      margin-top: 1px;
+      margin-left: 0px;
+    }
+  
+    .input-group3 {
+      position: relative;
+      margin-bottom: 30px;
+      border-bottom: 0px solid #ccc;
+    }
+    
+    .terms{
+      font-size: 12px;
+      color: #6c6b6b;
+      opacity: 1;
+      margin-left: 100px;
+    }
+  
+    .tix{
+      color: #3a3939;
+    }
+    
+    .input--style-1 {
+      padding: 9px 10px;
+      color: #000000;
+    }
+    
+    .input--style-4 {
+      padding: 10px 10px;
+      color: #000000;
+      margin-left:-55px ;
+    }
+  
+    .input--style-2 {
+      padding: 0px 60px;
+      color: #000000;
+    }
+    
+    .input--style-1::-webkit-input-placeholder {
+      /* WebKit, Blink, Edge */
+      color: #555;
+    }
+    
+    .input--style-1:-moz-placeholder {
+      /* Mozilla Firefox 4 to 18 */
+      color: #ad1717;
+      opacity: 1;
+    }
+    
+    .input--style-1::-moz-placeholder {
+      /* Mozilla Firefox 19+ */
+      color: #555;
+      opacity: 1;
+    }
+    
+    .input--style-1:-ms-input-placeholder {
+      /* Internet Explorer 10-11 */
+      color: #555;
+    }
+    
+    .input--style-1:-ms-input-placeholder {
+      /* Microsoft Edge */
+      color: #555;
+    }
+    
+    /* ==========================================================================
+       #TITLE
+       ========================================================================== */
+    .titleform{
+      margin-bottom: 0px;
+    }
+    .detailform{
+      margin-bottom: 37px;
+    }
+    
+    /* ==========================================================================
+       #CARD
+       ========================================================================== */
+    .card {
+      overflow: hidden;
+      -webkit-border-radius: 60px;
+      -moz-border-radius: 60px;
+      border-radius: 60px;
+      background: #ffffff;
+    }
+    
+    .card-1 {
+      -webkit-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+      -moz-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+      box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+    }
+    
+    .card-1 .card-heading {
+      background: url("/image/consert.jpg") center center/cover no-repeat;
+      padding-top: 210px;
+    }
+    
+    .card-1 .card-body {
+      padding: 0 90px;
+      padding-top: 55px;
+      padding-bottom:10px;
+    }
+    
+    @media (max-width: 767px) {
+      .card-1 .card-body {
+        padding: 0 40px;
+        padding-top: 40px;
+        padding-bottom: 40px;
+      }
+    }
+    
