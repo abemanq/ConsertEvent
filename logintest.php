@@ -2,12 +2,11 @@
     <body>
         <?php 
             //connect database
-            $conn = mysqli_connect('localhost', 'root', '', 'Consert');
+            $conn = mysqli_connect('localhost', 'root', '', 'consert');
 
             //initialize variable
             $uname = $_POST['username'];
             $pwd = $_POST['pwd'];
-            $queryString=$_SERVER['QUERY_STRING'];
 
             session_start();
 
@@ -34,7 +33,7 @@
                         if ($row['username'] === $uname && $row['password'] === $pwd) {
                             echo "Logged in!";
                             $_SESSION['username'] = $row['username'];
-                            header("Location:/member/home-member.html");
+                            header("Location:home-member.html");
                             exit();
                         }else{
                             header("Location:logintest.html");
