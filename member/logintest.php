@@ -7,6 +7,7 @@
             //initialize variable
             $uname = $_POST['username'];
             $pwd = $_POST['pwd'];
+            $queryString=$_SERVER['QUERY_STRING'];
 
             session_start();
 
@@ -20,10 +21,10 @@
                 $uname = validate($uname);
                 $pwd = validate($pwd);            
                 if (empty($uname)) {
-                    echo("Location: logintest.html");
+                    echo("Location:logintest.html");
                     exit();
                 }else if(empty($pwd)){
-                    header("Location: logintest.html");
+                    header("Location:Location:logintest.html");
                     exit();
                 }else{
                     $sql = "SELECT * FROM userprofile WHERE username='$uname' AND password='$pwd'";
@@ -33,7 +34,7 @@
                         if ($row['username'] === $uname && $row['password'] === $pwd) {
                             echo "Logged in!";
                             $_SESSION['username'] = $row['username'];
-                            header("Location: ticket.html");
+                            header("Location:/member/home-member.html");
                             exit();
                         }else{
                             header("Location:logintest.html");
