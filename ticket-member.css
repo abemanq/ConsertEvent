@@ -1,6 +1,6 @@
 body{
     color: #000000;
-    background: url(/image/blbg.png);
+    background: url(image/blbg.png);
     background-size:cover;
   }
   .title{
@@ -425,7 +425,7 @@ body{
     }
     
     .card-1 .card-heading {
-      background: url("/image/consert.jpg") center center/cover no-repeat;
+      background: url("image/consert.jpg") center center/cover no-repeat;
       padding-top: 210px;
     }
     
