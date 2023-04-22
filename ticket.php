@@ -15,7 +15,7 @@
             $usr = $_SESSION['username'];
             
             // make query
-            $sql = "INSERT INTO customers (FullName, LastName, Email, Pnum, Qty,username, userid) VALUES ('$fname', '$lname', '$uemail', '$upnum', '$qty', '$usr')";
+            $sql = "INSERT INTO customers (FullName, LastName, Email, Pnum, Qty, id,username) VALUES ('$fname', '$lname', '$uemail', '$upnum', '$qty', NULL, '$usr')";
 
             //connect query into database
             $result = mysqli_query($conn, $sql);

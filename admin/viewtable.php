@@ -16,17 +16,19 @@
                 <a href="dashboard.html" style="color: rgb(255, 255, 255);">Dashboard</a>
                 <a href="table.html">Table View</a>
                 <a href="event.html">Edit Events</a>
-                <div class="profile">
-                    <img src="/image/profile.jpg" alt="gambar admin" class="sideimg">
-                        <a href="/login.html">
+                <div class="container">
+                    <div class="sideprofile">
+                        <img src="image/profile.jpg" alt="gambar admin" class="sideimg">
+                        <a href="login.html">
                             <button class="button" role="log out">Log Out</button>
                         </a>
+                    </div>
                 </div>
             </div>
             <div class="main">
-                    <h1 class="title">Dashboard</h1>
+                <h1 class="title">Dashboard</h1>
                 <center>
-                    <a href="viewfunction.php">                       
+                    <a href="viewtable.php">                       
                         <button>View Registered Participants</button>
                     </a>
                     <br>
