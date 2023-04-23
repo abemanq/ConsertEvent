@@ -16,57 +16,44 @@
                 <a href="dashboard.html" style="color: rgb(255, 255, 255);">Dashboard</a>
                 <a href="table.html">Table View</a>
                 <a href="event.html">Edit Events</a>
-                <div class="container">
-                    <div class="sideprofile">
-                        <img src="image/profile.jpg" alt="gambar admin" class="sideimg">
+                <div class="profile">
+                    <img src="/image/profile.jpg" alt="gambar admin" class="sideimg">
                         <a href="login.html">
                             <button class="button" role="log out">Log Out</button>
                         </a>
-                    </div>
                 </div>
             </div>
             <div class="main">
-                <h1 class="title">Dashboard</h1>
+                    <h1 class="title">Dashboard</h1>
                 <center>
-                <h3 style="color:white">Registered Customer</h3>
-                <style>
-                    <?php include 'dashboard.css'; ?>
-                </style>
                 <?php
-                    echo "<table border='3' style='color:white; font-size:20px;align='center'; cellspacing='0'; cellpadding='5';'><tr>
-                        <td>First Name</td>
-                        <td>Last Name</td>
-                        <td>Email</td>
-                        <td>Phone Number</td>
-                        <td>Quantity Tix</td>
+                    echo "<table border='3' style='color:white; font-size:20px;'><tr>
+                        <td>Full Name</td>
                         <td>Username</td>
+                        <td>Address</td>
                         </tr>";
                     $con = mysqli_connect("localhost", "root", "","consert") or die("Cannot connect to server.".mysqli_error($con));
-                    $sql = "SELECT * FROM customers";
+                    $sql = "SELECT * FROM userprofile";
                     $result = mysqli_query($con,$sql) or die("Cannot execute sql.");
                     while($row=mysqli_fetch_array($result,MYSQLI_NUM))
                     {
-                    $fname=$row[0];
-                    $lname=$row[1];
-                    $email=$row[2];
-                    $pnum=$row[3];
-                    $qty=$row[4];
-                    $username=$row[6];
+                    $fname=$row[0].$row[1];
+                    $usr=$row[4];
+                    $add=$row[6];
 
                     echo "<tr>
                     <td>$fname</td>
-                    <td>$lname</td>
-                    <td>$email</td>
-                    <td>$pnum</td>
-                    <td>$qty</td>
-                    <td>$username</td>
+                    <td>$usr</td>
+                    <td>$add</td>
                     </tr>";
                     }
                     echo "</table>";
                 ?>
-                <a href="dashboard.html">
-                    <button>Back to dashboard</button>
-                </a>
+                <br>
+                <form action="deleteselect.php" method="POST">
+                    <input type="text" placeholder="Enter username.." name="username">
+                    <button type="submit">Delete</button>
+                </form>
                 </center>
             </div>
         </div>
