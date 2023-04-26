@@ -22,7 +22,7 @@
     <td>Address</td>
     </tr>";
     
-    $previewsql = "SELECT * FROM userprofile";
+    $previewsql = "SELECT * FROM userprofile WHERE username='$usr'";
     $result = mysqli_query($con,$previewsql) or die("Cannot execute sql.");
     $row=mysqli_fetch_array($result,MYSQLI_NUM);
 
@@ -44,7 +44,7 @@
     echo "</table>";
 ?>
 
-
+<?php
     $sql_delete = "DELETE FROM userprofile WHERE username='$usr'";
     $sql_result = mysqli_query($con,$sql_delete) or die("Error in sql due to ".mysql_error());
     if($sql_result){
@@ -53,7 +53,7 @@
     }
     else
     echo "Error in deleting the data";
-
+?>
 
 </body>
 </html>
