@@ -1,15 +1,16 @@
 <html>
 <body>
 <?php
-$con=mysqli_connect("localhost", "root", "","bookonline") or die("Cannot connect to
+$con=mysqli_connect("localhost", "root", "","concert") or die("Cannot connect to
 server.".mysqli_error($con));
 
- $name=@$_POST["name"];
- $password=@$_POST["password"];
- $address=@$_POST["address"];
+ $username = $_POST["username"];
+ $email = $_POST["email"];
+ $inputPassword5 = $_POST["inputPassword5"];
+ $inputPassword6 = $_POST["inputPassword5"];
 
 
- $insert_sql="INSERT INTO customer VALUES(null, '$password', '$name', '$address')";
+ $insert_sql="INSERT INTO customers VALUES(null, '$username', '$email', '$inputPassword5', '$inputPassword6')";
  $sql_result =mysqli_query($con,$insert_sql) or die("Error in inserting data due to
 ".mysql_error());
 if($sql_result)
