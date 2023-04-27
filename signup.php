@@ -3,10 +3,10 @@
 $con=mysqli_connect('localhost', 'root', '', 'concert') or die("Cannot connect to server." . mysqli_error($con));
 
 //initialize variable
-if(isset($_POST['FullName']) && isset($_POST['LastName']) && isset($_POST['email']) && isset($_POST['Pnum']) && isset($_POST['username']) && isset($_POST['Pnum']) && isset($_POST['password']) && isset($_POST['Address'])) {
+if(isset($_POST['FullName']) && isset($_POST['LastName']) && isset($_POST['Email']) && isset($_POST['Pnum']) && isset($_POST['username']) && isset($_POST['Pnum']) && isset($_POST['password']) && isset($_POST['Address'])) {
     $FullName = $_POST['FullName'];
     $LastName = $_POST['LastName'];
-    $Email = $_POST['email'];
+    $Email = $_POST['Email'];
     $Pnum = $_POST['Pnum'];
     $username = $_POST['username'];
     $password = $_POST['password'];
