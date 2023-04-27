@@ -12,7 +12,7 @@ if(isset($_POST['FullName']) && isset($_POST['LastName']) && isset($_POST['email
     $password = $_POST['password'];
     $Address = $_POST['Address'];
 
-  $insert_sql="INSERT INTO customers VALUES(null, '$FullName', '$LastName', '$Email', '$Pnum', '$username', '$password', '$Address')";
+  $insert_sql="INSERT INTO userprofile VALUES(null, '$FullName', '$LastName', '$Email', '$Pnum', '$username', '$password', '$Address')";
   $sql_result = mysqli_query($con, $insert_sql) or die("Error in inserting data due to " . mysqli_error($con));
   if($sql_result){
       echo "Data inserted successfully.";
