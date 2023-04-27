@@ -1,6 +1,8 @@
 <?php
+//connect database
 $con=mysqli_connect('localhost', 'root', '', 'concert') or die("Cannot connect to server." . mysqli_error($con));
 
+//initialize variable
 if(isset($_POST['username']) && isset($_POST['email']) && isset($_POST['password']) && isset($_POST['confirm_password'])) {
   $username = $_POST['username'];
   $email = $_POST['email'];
