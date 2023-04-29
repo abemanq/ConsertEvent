@@ -23,7 +23,7 @@
                     header("Location:logintest.html");
                     exit();
                 }else if(empty($pwd)){
-                    header("Location:Location:logintest.html");
+                    header("Location:logintest.html");
                     exit();
                 }else{
                     $sql = "SELECT * FROM userprofile WHERE username='$uname' AND password='$pwd'";
