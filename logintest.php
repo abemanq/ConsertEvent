@@ -20,7 +20,7 @@
                 $uname = validate($uname);
                 $pwd = validate($pwd);            
                 if (empty($uname)) {
-                    echo("Location:logintest.html");
+                    header("Location:logintest.html");
                     exit();
                 }else if(empty($pwd)){
                     header("Location:Location:logintest.html");
