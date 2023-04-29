@@ -33,7 +33,7 @@ body{
 .sideimg{
   position: absolute;
   width:25%; 
-  border-radius: 30px;
+  border-radius: 60px;
   margin-left: 10px;
   opacity: 0.8;
   border: 2px solid #f1f1f1;

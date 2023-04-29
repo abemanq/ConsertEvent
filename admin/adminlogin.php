@@ -20,33 +20,33 @@
                 $uname = validate($uname);
                 $pwd = validate($pwd);            
                 if (empty($uname)) {
-                    echo("Location:logintest.html");
+                    echo("Location:adminlogin.html");
                     exit();
                 }else if(empty($pwd)){
-                    header("Location:Location:logintest.html");
+                    header("Location:adminlogin.html");
                     exit();
                 }else{
-                    $sql = "SELECT * FROM userprofile WHERE username='$uname' AND password='$pwd'";
+                    $sql = "SELECT * FROM administer WHERE username='$uname' AND password='$pwd'";
                     $result = mysqli_query($conn, $sql);
                     if (mysqli_num_rows($result) === 1) {
                         $row = mysqli_fetch_assoc($result);
                         if ($row['username'] === $uname && $row['password'] === $pwd) {
                             echo "Logged in!";
                             $_SESSION['username'] = $row['username'];
-                            header("Location:home-member.html");
+                            header("Location:dashboard.html");
                             exit();
                         }
                         else{
-                            header("Location:logintest.html");
+                            header("Location:adminlogin.html");
                             exit();
                         }
                     }else{
-                        header("Location:logintest.html");
+                        header("Location:adminlogin.html");
                         exit();
                     }
                 }
             }else{
-                header("Location:logintest.html");
+                header("Location:adminlogin.html");
                 exit();
             }
         ?>
