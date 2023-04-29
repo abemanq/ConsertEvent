@@ -33,7 +33,7 @@
                         if ($row['username'] === $uname && $row['password'] === $pwd) {
                             echo "Logged in!";
                             $_SESSION['username'] = $row['username'];
-                            header("Location:home-member.html");
+                            header("Location:home-user.php");
                             exit();
                         }
                         else{

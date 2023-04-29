@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Artist</title>
+    <title>Profile</title>
     <link rel="stylesheet" href="#" >
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@1,300;1,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="artist.css">
+    <link rel="stylesheet" href="userprofile.css">
     <style>
     </style>
 </head>
@@ -22,51 +22,56 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mx-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="home.html">Home</a>
+          <a class="nav-link" href="home-member.html">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="logintest.html">Ticket</a>
+          <a class="nav-link" href="ticket-member.html">Ticket</a>
         </li>
         <li class="nav-item">
           <strong>
-            <a class="navbar-brand" href="home.html">
+            <a class="navbar-brand" href="home-member.html">
               <img src="image/logo.png" alt="logo sini" style="width: 60px; height:60px;">
             </a>
           </strong>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="artist.html">Artist</a>
+          <a class="nav-link" href="artist-member.html">Artist</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="faq.html">FAQ</a>
+          <a class="nav-link" href="faq-member.html">FAQ</a>
         </li>
       </ul>
-      <div class="button">
-        <a href="logintest.html" style="text-decoration: none;">
-          <button class="btn my-2 my-sm-0" type="login">Log In</button>
-        </a>
     </div>
+    <div class="sideprofile">
+      <strong>
+        <a class="sideimg" href="userprofile.html">
+          <img src="image/profile.jpg" alt="logo sini" style="width: 40px; height:40px; border-radius: 20px;">
+        </a>
+      </strong>
     </div>
   </nav>
+  </div>
   <center>
-    <h2 class="title">Artist Lineup</h2>
-    <p class="subtitle">Discover more about our best collaborators, see their work and know your artist better.</p>
-    <div class="gambar">
-        <img src="image/adam.png" alt="Adam Levine" class="single">
-        <img src="image/drake.png" alt="Drake" class="single"> 
-        <img src="image/taylor.png" alt="Taylor Swift" class="single" ><br><br><br>
-        <img src="image/nj.png" alt="New Jeans" class="single" >
-        <img src="image/bon.png" alt="Bonjovi" class="single" >
-        <img src="image/gnr.png" alt="Guns n Roses" class="single" ><br><br><br>
-        <img src="image/hujan.png" alt="hujan" class="single">
-        <img src="image/djsoda.png" alt="DJ Soda" class="single">
-        <img src="image/bp.png" alt="BlackPink" class="single" ><br><br><br>
-        <img src="image/yaph.png" alt="Yaph" class="single">
-        <img src="image/jf.png" alt="Joe Flizzow" class="single">
-        <img src="image/artic.png" alt="Artic Monkey" class="single" ><br>
-      </div>
-    
+    <h2 class="title">Welcome alala</h2> 
+    <?php 
+        session_start();
+        echo $_SESSION['username'];
+    ?>
+    <p class="subtitle">Set-up your own profile so that people can know you better !</p>
+    <div>
+        <!-- content -->
+        <form action="#" method="POST">
+            
+        </form>
+        <button type="submit">Edit Profile</button>
+    </div>
+      <a href="logout.php">
+        <button type="submit">Log Out</button>
+      </a>
   </center>
+  <br>
+  <br>
+  <br>
 <!-- Footer -->
 <footer class="text-center text-lg-start bg-white text-muted">
 
