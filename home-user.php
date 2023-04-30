@@ -60,10 +60,9 @@
     <p class="subtitle">Set-up your own profile so that people can know you better !</p>
     <div>
         <!-- content -->
-        <form action="#" method="POST">
-            
-        </form>
-        <button type="submit">Edit Profile</button>
+        <a href="update-details.html">
+          <button type="submit">Edit Profile</button>
+        </a>
     </div>
       <a href="logout.php">
         <button type="submit">Log Out</button>
