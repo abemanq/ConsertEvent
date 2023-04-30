@@ -10,15 +10,16 @@
 
 <body>
 <?php
+    session_start();
+
     $connect=mysqli_connect("localhost","root","","consert") or die("Connection failed");
+    $username = $_SESSION['username'];
+    $query = " SELECT * FROM userprofile WHERE username = '$username'";
+    $result = mysqli_query($connect, $query);
+    $row = mysqli_fetch_assoc($result)
 ?>
 
-
     <form action="update-details.php" method="post" align="center">
-        <?php 
-        $query = " SELECT * FROM userprofile";
-        $result = mysqli_query($connect, $query);
-        while ($row = mysqli_fetch_assoc($result))?>{
 
         Full Name: <input type="text" name="fname" value="<?php echo $row['FullName']?>"><br>
       
@@ -34,7 +35,7 @@
 
         Address: <input type="text" name="address" value="<?php echo $row['Address']?>"><br>
         
-        <input type="submit" name="edit">}
+        <input type="submit" name="edit">
         
      </form>
 </body>
