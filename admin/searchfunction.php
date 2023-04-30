@@ -28,25 +28,18 @@
                 <center>
                 <br>
                 <h3 style="color:white;">SEARCH USER</h3>
-                <form action="searchfunction.php" method="POST">
-                    <input type="text" name="username">
+                <form action="searchprocess.php" method="POST">
+                    <input type="text" name="username" placeholder="Username">
                     <br>
-                    <input type="text" name="lastname">
+                    <input type="text" name="lastname" placeholder="Last Name">
                     <br>
-                    <input type="text" name="address">
+                    <input type="text" name="address" placeholder="Address">
+                    <br>
                     <br>
                     <button type="submit">Search</button>
                 </form>
                 </center>
             </div>
         </div>
-        <?php
-            $con = mysqli_connect("localhost", "root", "","consert") or die("Cannot connect to server.".mysqli_error($con));
-            $user = $_POST["username"];
-
-            // $searchsql = "SELECT * FROM userprofile WHERE LastName LIKE '%$lname%' AND username LIKE '%$user%' AND address LIKE '%$add%'";
-            // $result = mysqli_query($con,$searchsql) or die("Cannot execute sql.");
-
-        ?>
     </body>
 </html>
