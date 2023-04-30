@@ -1,5 +1,5 @@
 <?php
     session_start(); //perintah agar file ini membaca/mengenal/memulai session
     session_destroy(); // perintah menghapus semua session yg ada
-    header("location:logintest.php"); // mengalihkan halaman ke login.php
+    header("location:login.html"); // mengalihkan halaman ke login.php
 ?>
