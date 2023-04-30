@@ -6,7 +6,7 @@
 
             //initialize variable
             $uname = $_POST['username'];
-            $pwd = $_POST['pwd'];
+            $pwd = $_POST['password'];
 
             session_start();
 
