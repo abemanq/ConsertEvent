@@ -16,9 +16,9 @@
                 <a href="dashboard.html" style="color: rgb(255, 255, 255);">Dashboard</a>
                 <a href="table.html">Table View</a>
                 <a href="event.html">Edit Events</a>
-                <div class="sideprofile">
-                    <img src="ConcertEvent/image/profile.jpg" alt="gambar admin" class="sideimg">
-                        <a href="adminlogin.html">
+                <div class="profile">
+                    <img src="image/profile.jpg" alt="gambar admin" class="sideimg">
+                        <a href="login.html">
                             <button class="button" role="log out">Log Out</button>
                         </a>
                 </div>
@@ -26,19 +26,27 @@
             <div class="main">
                     <h1 class="title">Dashboard</h1>
                 <center>
-                    <a href="viewtable.php">                       
-                        <button>View Registered Participants</button>
-                    </a>
+                <br>
+                <h3 style="color:white;">SEARCH USER</h3>
+                <form action="searchfunction.php" method="POST">
+                    <input type="text" name="username">
                     <br>
-                    <a href="deletefunction.php">                       
-                        <button>Delete User</button>
-                    </a>
+                    <input type="text" name="lastname">
                     <br>
-                    <a href="searchfunction.php">                       
-                        <button>Find/Search User</button>
-                    </a>
+                    <input type="text" name="address">
+                    <br>
+                    <button type="submit">Search</button>
+                </form>
                 </center>
             </div>
         </div>
+        <?php
+            $con = mysqli_connect("localhost", "root", "","consert") or die("Cannot connect to server.".mysqli_error($con));
+            $user = $_POST["username"];
+
+            // $searchsql = "SELECT * FROM userprofile WHERE LastName LIKE '%$lname%' AND username LIKE '%$user%' AND address LIKE '%$add%'";
+            // $result = mysqli_query($con,$searchsql) or die("Cannot execute sql.");
+
+        ?>
     </body>
 </html>

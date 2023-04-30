@@ -303,3 +303,12 @@ body{
   z-index: 1;
   position: relative;
 }
+
+.status{
+  margin-top: 3em;
+  font-family: 'Aboreto', cursive;
+  position: relative;
+  font-weight: bold;
+  color: white;
+  font-size: 30px;
+}

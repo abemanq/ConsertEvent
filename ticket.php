@@ -21,7 +21,7 @@
             $result = mysqli_query($conn, $sql);
 
             if($result)
-                ECHO "YOU SUCCESFULL PURCHASE THE TICKET";
+                header("Location: ticketsuccess.html");
             else{
                 ECHO "You Failed to Purchase the ticket";
                 echo mysqli_error();
