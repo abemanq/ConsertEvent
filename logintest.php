@@ -20,10 +20,10 @@
                 $uname = validate($uname);
                 $pwd = validate($pwd);            
                 if (empty($uname)) {
-                    header("Location:logintest.html");
+                    header("Location:login.html");
                     exit();
                 }else if(empty($pwd)){
-                    header("Location:logintest.html");
+                    header("Location:login.html");
                     exit();
                 }else{
                     $sql = "SELECT * FROM userprofile WHERE username='$uname' AND password='$pwd'";
@@ -37,16 +37,16 @@
                             exit();
                         }
                         else{
-                            header("Location:logintest.html");
+                            header("Location:login.html");
                             exit();
                         }
                     }else{
-                        header("Location:logintest.html");
+                        header("Location:login.html");
                         exit();
                     }
                 }
             }else{
-                header("Location:logintest.html");
+                header("Location:login.html");
                 exit();
             }
         ?>
