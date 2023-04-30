@@ -60,7 +60,7 @@
     <p class="subtitle">Set-up your own profile so that people can know you better !</p>
     <div>
         <!-- content -->
-        <a href="update-details.html">
+        <a href="update.php">
           <button type="submit">Edit Profile</button>
         </a>
     </div>

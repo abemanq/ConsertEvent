@@ -27,16 +27,16 @@
         }
         else{
            /*sorry your profile is not update*/
-           header('location:update_details.html');
+           header('location:update.php');
         }
     }
     else{
     /*sorry your id is not match*/
-    header('location:update_details.html');
+    header('location:update.php');
     }
 }
 else{
     /*sorry your id is not match*/
-    header('location:update_details.html');
+    header('location:update.php');
 }
 ?>
