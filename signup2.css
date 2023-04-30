@@ -15,6 +15,9 @@ body {
   .formlabel{
     color: #F5F5F5;
   }
+  .form-text{
+    color: white;
+  }
   
   input[type="text"], input[type="email"], input[type="password"] {
     width: 100%;
