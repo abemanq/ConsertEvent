@@ -32,6 +32,7 @@ if(isset($_POST['FullName']) && isset($_POST['LastName']) && isset($_POST['Email
     else {
         $insert_sql="INSERT INTO userprofile (FullName,LastName,Email,Pnum,username,password,Address) VALUES('$FullName', '$LastName', '$Email', '$Pnum', '$username', '$password', '$Address')"; 
         mysqli_query($con,$insert_sql) or die("Error in inserting data due to ".mysqli_error());
+        //If success, user will be directed to homepage
         if($insert_sql)
         header("Location: successreg.html");
         else
