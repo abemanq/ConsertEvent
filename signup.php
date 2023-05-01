@@ -1,9 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
 <?php
 //connect database
-$con=mysqli_connect('localhost', 'root', '', 'consert') or die("Cannot connect to server." . mysqli_error($con));
+$con=mysqli_connect('localhost', 'root', '', 'consert');
 
 //initialize variable
-if(isset($_POST['FullName']) && isset($_POST['LastName']) && isset($_POST['Email']) && isset($_POST['Pnum']) && isset($_POST['username']) && isset($_POST['Pnum']) && isset($_POST['password']) && isset($_POST['Address'])) {
+if(isset($_POST['FullName']) && isset($_POST['LastName']) && isset($_POST['Email']) && isset($_POST['Pnum']) && isset($_POST['username']) && isset($_POST['password']) && isset($_POST['Address'])) {
     $FullName = $_POST['FullName'];
     $LastName = $_POST['LastName'];
     $Email = $_POST['Email'];
@@ -12,14 +21,23 @@ if(isset($_POST['FullName']) && isset($_POST['LastName']) && isset($_POST['Email
     $password = $_POST['password'];
     $Address = $_POST['Address'];
 
-  $insert_sql="INSERT INTO userprofile (FullName, LastName, Email, Pnum, username, password, Address) VALUES('$FullName', '$LastName', '$Email', '$Pnum', '$username', '$password', '$Address')";
-  $sql_result = mysqli_query($con, $insert_sql) or die("Error in inserting data due to " . mysqli_error($con));
-  if($sql_result){
-      echo "Data inserted successfully.";
-      header('Location:home-user.php');
-  }
-  else{
-      echo "Error in inserting data.";
-  }
+    //to find whether username aldready used
+    $query = "SELECT * from userprofile where username='$username'";
+    $result = mysqli_query($con , $query);
+    
+    //to return the query result in number of rows
+    if (mysqli_num_rows($result)>0){
+    die("Username is taken");
+    }
+    else {
+        $insert_sql="INSERT INTO userprofile (FullName,LastName,Email,Pnum,username,password,Address) VALUES('$FullName', '$LastName', '$Email', '$Pnum', '$username', '$password', '$Address')"; 
+        mysqli_query($con,$insert_sql) or die("Error in inserting data due to ".mysqli_error());
+        if($insert_sql)
+        echo "Succesfully insert new data. Please log in back";
+        else
+        echo "Error in inserting new data";
+    }
 }
 ?>
+</body>
+</html>
