@@ -59,7 +59,7 @@
     $row = mysqli_fetch_assoc($result)
 ?>
 
-    <form action="update-details.php" method="post" align="center">
+    <form action="update-details.php" method="post">
 
         Full Name: <input type="text" name="fname" value="<?php echo $row['FullName']?>"><br>
       
