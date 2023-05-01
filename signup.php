@@ -33,7 +33,7 @@ if(isset($_POST['FullName']) && isset($_POST['LastName']) && isset($_POST['Email
         $insert_sql="INSERT INTO userprofile (FullName,LastName,Email,Pnum,username,password,Address) VALUES('$FullName', '$LastName', '$Email', '$Pnum', '$username', '$password', '$Address')"; 
         mysqli_query($con,$insert_sql) or die("Error in inserting data due to ".mysqli_error());
         if($insert_sql)
-        echo "Succesfully insert new data. Please log in back";
+        header("Location: successreg.html");
         else
         echo "Error in inserting new data";
     }
