@@ -21,14 +21,22 @@ if(isset($_POST['FullName']) && isset($_POST['LastName']) && isset($_POST['Email
     $password = $_POST['password'];
     $Address = $_POST['Address'];
 
-  $insert_sql="INSERT INTO userprofile (FullName,LastName,Email,Pnum,username,password,Address) VALUES('$FullName', '$LastName', '$Email', '$Pnum', '$username', '$password', '$Address')";
-  $sql_result = mysqli_query($con, $insert_sql) or die("Error in inserting data due to " . mysqli_error($con));
-  if($sql_result){
-      echo "Data inserted successfully.";
-  }
-  else{
-      echo "Error in inserting data.";
-  }
+    //to find whether username aldready used
+    $query = "SELECT * from userprofile where username='$username'";
+    $result = mysqli_query($con , $query);
+    
+    //to return the query result in number of rows
+    if (mysqli_num_rows($result)>0){
+    die("Username is taken");
+    }
+    else {
+        $insert_sql="INSERT INTO userprofile (FullName,LastName,Email,Pnum,username,password,Address) VALUES('$FullName', '$LastName', '$Email', '$Pnum', '$username', '$password', '$Address')"; 
+        mysqli_query($con,$insert_sql) or die("Error in inserting data due to ".mysqli_error());
+        if($insert_sql)
+        echo "Succesfully insert new data. Please log in back";
+        else
+        echo "Error in inserting new data";
+    }
 }
 ?>
 </body>
