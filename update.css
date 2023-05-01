@@ -1,0 +1,9 @@
+body {
+    background-color: #F5F5F5;
+    font-family: Arial, sans-serif;
+    background: url(image/bgforsignup.jpg);
+      background-size:cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
