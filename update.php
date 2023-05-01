@@ -60,7 +60,7 @@
 ?>
 
     <form action="update-details.php" method="post">
-
+    <div class="container">
         Full Name: <input type="text" name="fname" value="<?php echo $row['FullName']?>"><br>
       
         Last Name: <input type="text" name="lname"value="<?php echo $row['LastName']?>"><br>
@@ -76,7 +76,7 @@
         Address: <input type="text" name="address" value="<?php echo $row['Address']?>"><br>
         
         <input type="submit" name="edit">
-        
+      </div>
      </form>
 </body>
 </html>
