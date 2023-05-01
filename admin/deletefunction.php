@@ -27,7 +27,7 @@
                     <h1 class="title">Dashboard</h1>
                 <center>
                 <?php
-                    echo "<table border='3' style='color:white; font-size:20px;'><tr>
+                    echo "<table border='3' style='color:white; font-size:20px;align='center'; cellspacing='0'; cellpadding='5';'><tr>
                         <td>Full Name</td>
                         <td>Username</td>
                         <td>Address</td>

@@ -9,51 +9,68 @@
     <title>Document</title>
 </head>
 <body>
-<?php 
-    $con = mysqli_connect("localhost", "root", "","consert") or die("Cannot connect to server.".mysqli_error($con));
-    $usr = $_POST["username"];
+<div class="topbar">
+            <div class="sidebar">
+                <a href="dashboard.html" style="color: rgb(255, 255, 255);">Dashboard</a>
+                <a href="table.html">Table View</a>
+                <a href="event.html">Edit Events</a>
+                <div class="container">
+                    <div class="sideprofile">
+                        <img src="image/profile.jpg" alt="gambar admin" class="sideimg">
+                        <a href="login.html">
+                            <button class="button" role="log out">Log Out</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="main">
+                <h1 class="title">Dashboard</h1>
+                <center>
+                    <h3 style="color:white">User Succesfully Deleted.</h3>
+                        <?php 
+                            $con = mysqli_connect("localhost", "root", "","consert") or die("Cannot connect to server.".mysqli_error($con));
+                            $usr = $_POST["username"];
 
-    echo "<table border='3' style='color:white; font-size:20px;'><tr>
-    <td>First Name</td>
-    <td>Last Name</td>
-    <td>Email</td>
-    <td>Phone Number</td>
-    <td>Username</td>
-    <td>Address</td>
-    </tr>";
-    
-    $previewsql = "SELECT * FROM userprofile WHERE username='$usr'";
-    $result = mysqli_query($con,$previewsql) or die("Cannot execute sql.");
-    $row=mysqli_fetch_array($result,MYSQLI_NUM);
+                            echo "<table border='3' style='color:white; font-size:20px;align='center'; cellspacing='0'; cellpadding='5';'><tr>
+                            <td>Username</td>
+                            <td>FullName</td>
+                            <td>LastName</td>
+                            <td>Email</td>
+                            <td>Phone Number</td>
+                            <td>Address</td>
+                            </tr>";
+                            
+                            $previewsql = "SELECT * FROM userprofile WHERE username='$usr'";
+                            $result = mysqli_query($con,$previewsql) or die("Cannot execute sql.");
+                            $row=mysqli_fetch_array($result,MYSQLI_NUM);
 
-    $usr = $row[4];
-    $fname = $row[0];
-    $lname = $row[1];
-    $email = $row[2];
-    $pnum = $row[3];
-    $add = $row[6];
+                            $usr = $row[4];
+                            $fname = $row[0];
+                            $lname = $row[1];
+                            $email = $row[2];
+                            $pnum = $row[3];
+                            $add = $row[6];
 
-    echo "<tr>
-    <td>$usr</td>
-    <td>$fname</td>
-    <td>$lname</td>
-    <td>$email</td>
-    <td>$pnum</td>
-    <td>$add</td>
-    </tr>";
-    echo "</table>";
-?>
+                            echo "<tr>
+                            <td>$usr</td>
+                            <td>$fname</td>
+                            <td>$lname</td>
+                            <td>$email</td>
+                            <td>0$pnum</td>
+                            <td>$add</td>
+                            </tr>";
+                            echo "</table>";
+                        ?>
 
-<?php
-    $sql_delete = "DELETE FROM userprofile WHERE username='$usr'";
-    $sql_result = mysqli_query($con,$sql_delete) or die("Error in sql due to ".mysql_error());
-    if($sql_result){
-    echo "<h3 style='color:white;'>Succesfully deleted.</h3>";
-    echo "<a href=dashboard.html><button>Back To Dashboard<button></a>";
-    }
-    else
-    echo "Error in deleting the data";
-?>
+                        <?php
+                            $sql_delete = "DELETE FROM userprofile WHERE username='$usr'";
+                            $sql_result = mysqli_query($con,$sql_delete) or die("Error in sql due to ".mysql_error());
+                            if($sql_result){
+                            echo "<a href=dashboard.html><button>Back To Dashboard</button></a>";
+                            }
+                            else
+                            echo "Error in deleting the data";
+                        ?>
 
 </body>
 </html>
