@@ -27,7 +27,7 @@ if(isset($_POST['FullName']) && isset($_POST['LastName']) && isset($_POST['Email
     
     //to return the query result in number of rows
     if (mysqli_num_rows($result)>0){
-    die("Username is taken");
+        die("<script>alert('Username is taken'); window.location.href='signup2.html';</script>");
     }
     else {
         $insert_sql="INSERT INTO userprofile (FullName,LastName,Email,Pnum,username,password,Address) VALUES('$FullName', '$LastName', '$Email', '$Pnum', '$username', '$password', '$Address')"; 
