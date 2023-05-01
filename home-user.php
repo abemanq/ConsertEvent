@@ -86,8 +86,7 @@
               <i class="fas fa-gem me-3 text-secondary"></i>AKU,DIA DAN KAMU
             </h6>
             <p>
-              Here you can use rows and columns to organize your footer content. Lorem ipsum
-              dolor sit amet, consectetur adipisicing elit.
+            Art of Speed Malaysia is an annual event featuring artwork in various formats including canvas, poster, moving visual, sculpture and rolling art. Exhibitors are exclusively invited to the show promising quality content for visitors.
             </p>
           </div>
           <!-- Grid column -->
