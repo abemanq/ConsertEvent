@@ -52,11 +52,11 @@
   </nav>
   </div>
   <center>
-    <h2 class="title">Welcome alala</h2> 
-    <?php 
-        session_start();
-        echo $_SESSION['username'];
-    ?>
+    <?php
+    session_start();
+    $username = $_SESSION['username']; ?>
+    <h2 class="title">Welcome <?php echo $username ?> </h2> 
+    
     <p class="subtitle">Set-up your own profile so that people can know you better !</p>
     <div>
         <!-- content -->
