@@ -32,8 +32,8 @@ if(isset($_POST['FullName']) && isset($_POST['LastName']) && isset($_POST['Email
     else {
         //Check if number of registered users is less than 10
         $sql = "SELECT COUNT(*) as count FROM userprofile";
-        $result = mysqli_query($con, $sql);
-        $row = mysqli_fetch_assoc($result);
+        $result2 = mysqli_query($con, $sql);
+        $row = mysqli_fetch_assoc($result2);
         $count = $row['count'];
     
         if ($count = 10) {
