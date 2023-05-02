@@ -1,7 +1,6 @@
 <?php 
     $conn = mysqli_connect('localhost', 'root', '','consert');
     $seat = $_POST['seat'];
-
     $sql_delete = "DELETE FROM seater WHERE seat='$seat'";
     $sql_result = mysqli_query($conn,$sql_delete) or die("Error in sql due to ".mysql_error());
   

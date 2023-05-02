@@ -24,7 +24,7 @@
           <a class="nav-link" href="home-member.html">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="ticket-member.html">Ticket</a>
+          <a class="nav-link" href="ticket-member.php">Ticket</a>
         </li>
         <li class="nav-item">
           <strong>

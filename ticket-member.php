@@ -25,7 +25,7 @@
           <a class="nav-link" href="home-member.html">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="ticket-member.html">Ticket</a>
+          <a class="nav-link" href="ticket-member.php">Ticket</a>
         </li>
         <li class="nav-item">
           <strong>
@@ -94,7 +94,7 @@
                                   <label for="Ticket" class="tix">Select Quantity Ticket:--</label>
                                   <select id ="Ticket" class="input--style-2" type="text" name="tix">
                                     <option value="1">1</option>
-                                    <option value="2">2</option>
+                                    <option value="2">2</option>                                   
                                   </select>
                                 </div>
                               </div>                             
