@@ -31,13 +31,13 @@ if(isset($_POST['FullName']) && isset($_POST['LastName']) && isset($_POST['Email
     }
     else {
         //Check if number of registered users is less than 10
-        $sql = "SELECT COUNT(*) as count FROM userprofile";
-        $result2 = mysqli_query($con, $sql);
+        $query2 = "SELECT COUNT(*) as count FROM userprofile";
+        $result2 = mysqli_query($con, $query2);
         $row = mysqli_fetch_assoc($result2);
         $count = $row['count'];
     
         if ($count = 10) {
-            header("Location: failreg.html");
+            die("<script>alert('Fail to register'); window.location.href='failreg.html';</script>");
         }
         else {
          //If not more than 10 user, data will be inserted  
