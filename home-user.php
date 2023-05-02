@@ -10,6 +10,38 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@1,300;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="userprofile.css">
     <style>
+      table {
+        border-collapse: collapse;
+        width: 50%;
+        margin: 20px 0;
+        font-size: 16px;
+        font-family: Arial, sans-serif;
+        color: #333;
+        background-color: #FFEE88;
+      }
+
+      thead {
+        background-color: #f2f2f2;
+      }
+
+      th, td {
+        padding: 8px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+      }
+
+      th {
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+
+      tr:nth-child(even) {
+        background-color: #00CC99;
+      }
+
+      tr:hover {
+        background-color: #ddd;
+      }
     </style>
 </head>
 <body class="body">
@@ -43,7 +75,7 @@
     </div>
     <div class="sideprofile">
       <strong>
-        <a class="sideimg" href="userprofile.html">
+        <a class="sideimg" href="home-user.php">
           <img src="image/profile.jpg" alt="logo sini" style="width: 40px; height:40px; border-radius: 20px;">
         </a>
       </strong>
@@ -53,10 +85,42 @@
   <center>
     <?php
     session_start();
-    $username = $_SESSION['username']; ?>
+    $connect=mysqli_connect("localhost","root","","consert") or die("Connection failed");
+    $username = $_SESSION['username']; 
+    $query = " SELECT * FROM userprofile WHERE username = '$username'";
+    $result = mysqli_query($connect, $query);
+    $row = mysqli_fetch_assoc($result);
+    ?>
     <h2 class="title">Welcome <?php echo $username ?> </h2> 
     
     <p class="subtitle">Set-up your own profile so that people can know you better !</p>
+    <!-- table to view user profile before editing -->
+    <table>
+      <tr>
+        <th>FullName:</th>
+        <td><?php echo $row['FullName']; ?></td>
+      </tr>
+      <tr>
+        <th>LastName:</th>
+        <td><?php echo $row['LastName']; ?></td>
+      </tr>
+      <tr>
+        <th>Email:</th>
+        <td><?php echo $row['Email']; ?></td>
+      </tr>
+      <tr>
+        <th>Phone Number:</th>
+        <td><?php echo $row['Pnum']; ?></td>
+      </tr>
+      <tr>
+        <th>Username:</th>
+        <td><?php echo $row['username']; ?></td>
+      </tr>
+      <tr>
+        <th>Address:</th>
+        <td><?php echo $row['Address']; ?></td>
+      </tr>
+    <table>
     <div>
         <!-- content -->
         <a href="update.php">

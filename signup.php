@@ -32,8 +32,8 @@ if(isset($_POST['FullName']) && isset($_POST['LastName']) && isset($_POST['Email
     else {
         //Check if number of registered users is less than 10
         $sql = "SELECT COUNT(*) as count FROM userprofile";
-        $result = mysqli_query($con, $sql);
-        $row = mysqli_fetch_assoc($result);
+        $result2 = mysqli_query($con, $sql);
+        $row = mysqli_fetch_assoc($result2);
         $count = $row['count'];
     
         if ($count = 10) {
@@ -42,7 +42,7 @@ if(isset($_POST['FullName']) && isset($_POST['LastName']) && isset($_POST['Email
         else {
          //If not more than 10 user, data will be inserted  
         $insert_sql="INSERT INTO userprofile (FullName,LastName,Email,Pnum,username,password,Address) VALUES('$FullName', '$LastName', '$Email', '$Pnum', '$username', '$password', '$Address')"; 
-        mysqli_query($con,$insert_sql) or die("Error in inserting data due to ".mysqli_error());
+        mysqli_query($con,$insert_sql) or die("Error in inserting data");
         
         //If success, user will be directed to homepage
         if($insert_sql)

@@ -23,7 +23,7 @@
           <a class="nav-link" href="home-member.html">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="ticket-member.html">Ticket</a>
+          <a class="nav-link" href="ticket-member.php">Ticket</a>
         </li>
         <li class="nav-item">
           <strong>
@@ -42,7 +42,7 @@
     </div>
     <div class="sideprofile">
       <strong>
-        <a class="sideimg" href="userprofile.html">
+        <a class="sideimg" href="home-user.php">
           <img src="image/profile.jpg" alt="logo sini" style="width: 40px; height:40px; border-radius: 20px;">
         </a>
       </strong>
