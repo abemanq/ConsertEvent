@@ -11,11 +11,15 @@
     </style>
     </head>
     <body>
+        <?php 
+            session_start();
+            $conn = mysqli_connect('localhost','root','','consert');
+        ?>
         <div class="topbar">
             <div class="sidebar">
                 <a href="dashboard.html">Dashboard</a>
-                <a href="table.html">Table View</a>
-                <a href="event.html" style="color: rgb(255, 255, 255);">Edit Events</a>
+                <a href="table.html">View Table</a>
+                <a href="event.php" style="color: rgb(255, 255, 255);">Edit Events</a>
                 <div class="sideprofile">
                     <img src="/image/profile.jpg" alt="gambar admin" class="sideimg">
                         <a href="adminlogin.html">
@@ -24,9 +28,14 @@
                 </div>
             </div>
             <div class="main">
-                    <h1 class="title">View Table</h1>
+                    <h1 class="title">Edit Events</h1>
                 <center>
-                    <!-- content here -->
+                <h3 style="color:white;">Add Seat Section</h3>
+                    <form action="add-seat-process.php" method='post'>
+                        <label for="" style="color:white;">Enter Additional Seat Section</label><br><br>
+                        <input type="text" name="seat">
+                        <button type="submit">Add</button>
+                    </form>
                 </center>
             </div>
         </div>
