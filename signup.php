@@ -36,7 +36,7 @@ if(isset($_POST['FullName']) && isset($_POST['LastName']) && isset($_POST['Email
         $row = mysqli_fetch_assoc($result);
         $count = $row['count'];
     
-        if ($count = 6) {
+        if ($count = 10) {
             header("Location: failreg.html");
         }
         else{
