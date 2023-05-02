@@ -70,96 +70,95 @@
   <br>
   <br>
   <br>
-<!-- Footer -->
-<footer class="text-center text-lg-start bg-white text-muted">
-
-    <!-- Section: Links  -->
-    <section class="" style="padding-top: 0.5%;">
-      <div class="container text-center text-md-start mt-5">
-        <!-- Grid row -->
-        <div class="row mt-3">
-          <!-- Grid column -->
-          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-            <!-- Content -->
-            <h6 class="text-uppercase fw-bold mb-4">
-              <i class="fas fa-gem me-3 text-secondary"></i>AKU,DIA DAN KAMU
-            </h6>
-            <p>
+   <!-- Footer -->
+   <footer class="text-center text-lg-start bg-white text-muted">
+  <!-- Section: Links  -->
+  <section class="" style="padding-top: 0.5%;">
+    <div>
+      <!-- Grid row -->
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <!-- Content -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            <i class="fas fa-gem me-3 text-secondary"></i>AKU,DIA DAN KAMU
+          </h6>
+          <p>
             Art of Speed Malaysia is an annual event featuring artwork in various formats including canvas, poster, moving visual, sculpture and rolling art. Exhibitors are exclusively invited to the show promising quality content for visitors.
-            </p>
-          </div>
-          <!-- Grid column -->
-  
-          <!-- Grid column -->
-          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-            <!-- Links -->
-            <h6 class="text-uppercase fw-bold mb-4">
-              Products
-            </h6>
-            <p>
-              <a href="#!" class="text-reset">Home</a>
-            </p>
-            <p>
-              <a href="#!" class="text-reset">Ticket</a>
-            </p>
-            <p>
-              <a href="#!" class="text-reset">Artist</a>
-            </p>
-            <p>
-              <a href="#!" class="text-reset">FAQs</a>
-            </p>
-          </div>
-          <!-- Grid column -->
-  
-          <!-- Grid column -->
-          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-            <!-- Links -->
-            <h6 class="text-uppercase fw-bold mb-4">
-              Socials
-            </h6>
-            <p>
-              <a href="#!" class="text-reset">Facebook</a>
-            </p>
-            <p>
-              <a href="#!" class="text-reset">Instragram</a>
-            </p>
-            <p>
-              <a href="#!" class="text-reset">Twitter</a>
-            </p>
-            <p>
-              <a href="#!" class="text-reset">GitHub</a>
-            </p>
-          </div>
-          <!--Grid column -->
-  
-          <!-- Grid column -->
-          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-            <!-- Links -->
-            <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
-            <p><i class="fas fa-home me-3 text-secondary"></i>Putrajaya, MY</p>
-            <p>
-              <i class="fas fa-envelope me-3 text-secondary"></i>
-              AOS2023@events.com
-            </p>
-            <p><i class="fas fa-phone me-3 text-secondary"></i> +60 11 2786 5650</p>
-            <p><i class="fas fa-print me-3 text-secondary"></i> +60 12 756 3347</p>
-          </div>
-          <!-- Grid column -->
+          </p>
         </div>
-        <!-- Grid row -->
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Products
+          </h6>
+          <p>
+            <a href="#!" class="text-reset">Home</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Ticket</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Artist</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">FAQs</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Socials
+          </h6>
+          <p>
+            <a href="#!" class="text-reset">Facebook</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Instragram</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Twitter</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">GitHub</a>
+          </p>
+        </div>
+        <!--Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+          <p><i class="fas fa-home me-3 text-secondary"></i>Putrajaya, MY</p>
+          <p>
+            <i class="fas fa-envelope me-3 text-secondary"></i>
+            AOS2023@events.com
+          </p>
+          <p><i class="fas fa-phone me-3 text-secondary"></i> +60 11 2786 5650</p>
+          <p><i class="fas fa-print me-3 text-secondary"></i> +60 12 756 3347</p>
+        </div>
+        <!-- Grid column -->
       </div>
-    </section>
-    <!-- Section: Links  -->
-  
-    <!-- Copyright -->
-    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.025);">
-      © 2023Copyright:
-      <a class="text-reset fw-bold text-decoration-none" href="">AOS2023</a>
+      <!-- Grid row -->
     </div>
-    <!-- Copyright -->
-  </footer>
-  <!-- Footer -->
-  
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
-    </body>
+  </section>
+  <!-- Section: Links  -->
+
+  <!-- Copyright -->
+  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.025);">
+    © 2023Copyright:
+    <a class="text-reset fw-bold text-decoration-none" href="">AOS2023</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+</body>
 </html>

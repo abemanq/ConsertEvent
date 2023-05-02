@@ -91,7 +91,7 @@
 
     <!-- Section: Links  -->
     <section class="" style="padding-top: 0.5%;">
-      <div class="container text-center text-md-start mt-5">
+      <div>
         <!-- Grid row -->
         <div class="row mt-3">
           <!-- Grid column -->
