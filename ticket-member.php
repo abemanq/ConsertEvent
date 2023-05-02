@@ -106,7 +106,7 @@
                               <div class="col-2">
                                 <div class="input-group3">
                                   <label for="Ticket" class="tix">Select Seat Type:--</label>
-                                  <select id ="Ticket" class="input--style-2" type="text" name="tix">
+                                  <select id ="Ticket" class="input--style-2" type="text" name="seat">
                                     <?php
                                     $seatsql = "SELECT * FROM seater";
                                     $seat = mysqli_query($conn, $seatsql);

@@ -33,13 +33,14 @@
                     <?php include 'dashboard.css'; ?>
                 </style>
                 <?php
-                    echo "<table border='3' style='color:white; font-size:20px;align='center'; cellspacing='0'; cellpadding='5';'><tr>
+                    echo "<table border='3' style='color:white; font-size:20px;align='center'; cellspacing='0'; cellpadding='5'; background-color:white;'><tr>
                         <td>First Name</td>
                         <td>Last Name</td>
                         <td>Email</td>
                         <td>Phone Number</td>
                         <td>Quantity Tix</td>
                         <td>Username</td>
+                        <td>Seat Type</td>
                         </tr>";
                     $con = mysqli_connect("localhost", "root", "","consert") or die("Cannot connect to server.".mysqli_error($con));
                     $sql = "SELECT * FROM customers";
@@ -52,14 +53,16 @@
                     $pnum=$row[3];
                     $qty=$row[4];
                     $username=$row[6];
+                    $seat=$row[7];
 
                     echo "<tr>
                     <td>$fname</td>
                     <td>$lname</td>
                     <td>$email</td>
-                    <td>$pnum</td>
+                    <td>0$pnum</td>
                     <td>$qty</td>
                     <td>$username</td>
+                    <td>$seat</td>
                     </tr>";
                     }
                     echo "</table>";

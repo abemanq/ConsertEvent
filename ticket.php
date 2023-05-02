@@ -12,10 +12,11 @@
             $uemail = $_POST["email"];
             $upnum= $_POST["pnum"];
             $qty = $_POST["tix"];
+            $seat = $_POST["seat"];
             $usr = $_SESSION['username'];
             
             // make query
-            $sql = "INSERT INTO customers (FullName, LastName, Email, Pnum, Qty, id,username) VALUES ('$fname', '$lname', '$uemail', '$upnum', '$qty', NULL, '$usr')";
+            $sql = "INSERT INTO customers (FullName, LastName, Email, Pnum, Qty, id,username, seatype) VALUES ('$fname', '$lname', '$uemail', '$upnum', '$qty', NULL, '$usr', '$seat')";
 
             //connect query into database
             $result = mysqli_query($conn, $sql);
