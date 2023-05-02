@@ -232,9 +232,9 @@ body{
         }
         
         input[type="text"], input[type="email"], input[type="password"] {
-          width: 100%;
-          padding: 12px 20px;
-          margin: 8px 0;
+          width: 60%;
+          padding: 9px 10px;
+          margin: -1px 5em;
           box-sizing: border-box;
           border: 2px solid #ccc;
           border-radius: 4px;

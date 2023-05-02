@@ -8,7 +8,41 @@
     <link rel="stylesheet" href="userprofile.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@1,300;1,400&display=swap" rel="stylesheet">
-</head>
+    <style>
+      table {
+        border-collapse: collapse;
+        width: 50%;
+        margin: 20px 0;
+        font-size: 16px;
+        font-family: Arial, sans-serif;
+        color: #333;
+        background-color: #FFEE88;
+      }
+
+      thead {
+        background-color: #f2f2f2;
+      }
+
+      th, td {
+        padding: 8px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+      }
+
+      th {
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+
+      tr:nth-child(even) {
+        background-color: #00CC99;
+      }
+
+      tr:hover {
+        background-color: #ddd;
+      }
+    </style>
+  </head>
 
 <body class="body">
 <!-- making navigation bar -->
@@ -61,26 +95,56 @@
     <h2 class="title">Welcome <?php echo $username ?> </h2> 
     
     <p class="subtitle">Set-up your own profile so that people can know you better !</p>
+    <form action="update-details.php" method="post" style="margin-top: 0em;">
+    <table>
+      <tr>
+        <th>Full Name:</th>
+        <td>
+          <input type="text" name="fname" value="<?php echo $row['FullName']?>"><br>
+        </td>
+      </tr>
+      <tr>
+        <th>Last Name:</th>
+        <td>
+          <input type="text" name="lname"value="<?php echo $row['LastName']?>"><br>
+        </td>
+      </tr>
+      <tr>
+        <th>Email:</th>
+        <td>
+          <input type="email" name="email" value="<?php echo $row['Email']?>"><br>
+        </td>
+      </tr>
+      <tr>
+        <th>Phone Number:</th>
+        <td>
+          <input type="text" name="pnum" value="<?php echo $row['Pnum']?>"><br>
+        </td>
+      </tr>
+      <tr>
+        <th>Address:</th>
+        <td>
+          <input type="text" name="address" value="<?php echo $row['Address']?>"><br>          
+        </td>
+      </tr>
+      <tr>
+        <th>Username:</th>
+        <td>
+          <input type="text" name="username" value="<?php echo $row['username']?>" style="color:grey;"readonly><br> 
+        </td>
+      </tr>
+      <tr>
+        <th>Password:</th>
+        <td>
+          <input type="password" name="password" value="<?php echo $row['password']?>" style="color:grey;" readonly><br>         
+        </td>
+      </tr>
+    <table>
         <!-- content -->
-      <form action="update-details.php" method="post" style="margin-top: -10em;">
-      <div class=" container text " style="max-width: 550px;">
-        Full Name:<input type="text" name="fname" value="<?php echo $row['FullName']?>"><br>
-      
-        Last Name: <input type="text" name="lname"value="<?php echo $row['LastName']?>"><br>
-      
-        Email: <input type="email" name="email" value="<?php echo $row['Email']?>"><br>
-
-        Phone Number: <input type="text" name="pnum" value="<?php echo $row['Pnum']?>"><br>
-
-        Username: <input type="text" name="username" value="<?php echo $row['username']?>" readonly><br>
-
-        Password: <input type="password" name="password" value="<?php echo $row['password']?>" readonly><br>
-
-        Address: <input type="text" name="address" value="<?php echo $row['Address']?>"><br>
-        
         <input type="submit" name="edit">
+        <button type="submit" name="edit" style="margin-left:5px;">Back</button>
       </div>
-      </form>
+    </form>
   </center>
   <br>
   <br>

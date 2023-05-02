@@ -97,11 +97,11 @@
     <!-- table to view user profile before editing -->
     <table>
       <tr>
-        <th>FullName:</th>
+        <th>Full Name:</th>
         <td><?php echo $row['FullName']; ?></td>
       </tr>
       <tr>
-        <th>LastName:</th>
+        <th>Last Name:</th>
         <td><?php echo $row['LastName']; ?></td>
       </tr>
       <tr>
