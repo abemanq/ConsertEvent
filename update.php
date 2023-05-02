@@ -61,10 +61,9 @@
     <h2 class="title">Welcome <?php echo $username ?> </h2> 
     
     <p class="subtitle">Set-up your own profile so that people can know you better !</p>
-    <div>
         <!-- content -->
-        <form action="update-details.php" method="post">
-      <div class="container text">
+      <form action="update-details.php" method="post" style=margin-top: 500px;>
+      <div class=" container text " style="max-width: 550px;">
         Full Name:<input type="text" name="fname" value="<?php echo $row['FullName']?>"><br>
       
         Last Name: <input type="text" name="lname"value="<?php echo $row['LastName']?>"><br>
@@ -81,7 +80,7 @@
         
         <input type="submit" name="edit">
       </div>
-    </form>
+      </form>
   </center>
   <br>
   <br>

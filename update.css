@@ -20,10 +20,10 @@ body {
     text-align: left;
     margin: auto;
     max-width: 50%;
-    margin-top: 15%;
+    margin-top: 5%;
     font-size: 14px;
     line-height: 1.2;
-    padding: 10px;
+    padding-top: 50%;
   }
 
   .formlabel{
@@ -36,10 +36,10 @@ body {
   }
   
   input[type="text"], input[type="email"], input[type="password"] {
-    width: 100%;
+    width: 50%;
     padding: 12px 20px;
     margin: 8px 0;
-    box-sizing: border-box;
+    box-sizing: content-box;
     border: 2px solid #ccc;
     border-radius: 4px;
     font-size: 16px;
@@ -113,7 +113,7 @@ body {
 .white-box {
     background-color: rgb(255, 255, 255);
     height: 160px;
-    width: 100em;
+    width: 50em;
     border-radius: 40px;
     text-align: center;
 }
@@ -128,7 +128,7 @@ body {
     position: relative;
     background-color: rgb(85, 85, 85);
     height: 480px;
-    width: 117.7em;
+    width: 5oem;
     overflow-x: hidden;
     opacity: 0.5;
     z-index: -1;
@@ -258,3 +258,4 @@ body {
         opacity: 0.8;
         border: 6px solid #f1f1f1;
       }
+  
