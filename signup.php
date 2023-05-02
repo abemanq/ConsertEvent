@@ -21,22 +21,34 @@ if(isset($_POST['FullName']) && isset($_POST['LastName']) && isset($_POST['Email
     $password = $_POST['password'];
     $Address = $_POST['Address'];
 
-    //to find whether username aldready used
-    $query = "SELECT * from userprofile where username='$username'";
+    //To find whether username already used
+    $query = "SELECT * FROM userprofile WHERE username='$username'";
     $result = mysqli_query($con , $query);
     
-    //to return the query result in number of rows
+    //To return the query result in number of rows
     if (mysqli_num_rows($result)>0){
         die("<script>alert('Username is taken'); window.location.href='signup2.html';</script>");
     }
     else {
+        //Check if number of registered users is less than 10
+        $sql = "SELECT COUNT(*) as count FROM userprofile";
+        $result = mysqli_query($con, $sql);
+        $row = mysqli_fetch_assoc($result);
+        $count = $row['count'];
+    
+        if ($count = 6) {
+            header("Location: failreg.html");
+        }
+        else{
         $insert_sql="INSERT INTO userprofile (FullName,LastName,Email,Pnum,username,password,Address) VALUES('$FullName', '$LastName', '$Email', '$Pnum', '$username', '$password', '$Address')"; 
         mysqli_query($con,$insert_sql) or die("Error in inserting data due to ".mysqli_error());
+        
         //If success, user will be directed to homepage
         if($insert_sql)
         header("Location: successreg.html");
         else
         echo "Error in inserting new data";
+        }
     }
 }
 ?>
