@@ -1,4 +1,4 @@
-/* Global styles */
+
 * {
     box-sizing: border-box;
   }
@@ -17,7 +17,6 @@
     padding: 20px;
   }
   
-  /* Typography */
   .title {
     font-size: 28px;
     font-weight: bold;
@@ -81,4 +80,4 @@
     .container {
       max-width: 90%;
     }
-  
+}
