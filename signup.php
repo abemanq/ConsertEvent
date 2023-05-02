@@ -30,17 +30,7 @@ if(isset($_POST['FullName']) && isset($_POST['LastName']) && isset($_POST['Email
         die("<script>alert('Username is taken'); window.location.href='signup2.html';</script>");
     }
     else {
-        //Check if number of registered users is less than 10
-        $query2 = "SELECT COUNT(*) as count FROM userprofile";
-        $result2 = mysqli_query($con, $query2);
-        $row = mysqli_fetch_assoc($result2);
-        $count = $row['count'];
-    
-        if ($count = 10) {
-            die("<script>alert('Fail to register'); window.location.href='failreg.html';</script>");
-        }
-        else {
-         //If not more than 10 user, data will be inserted  
+         //Insert user data
         $insert_sql="INSERT INTO userprofile (FullName,LastName,Email,Pnum,username,password,Address) VALUES('$FullName', '$LastName', '$Email', '$Pnum', '$username', '$password', '$Address')"; 
         mysqli_query($con,$insert_sql) or die("Error in inserting data due to ".mysqli_error());
         
@@ -51,7 +41,6 @@ if(isset($_POST['FullName']) && isset($_POST['LastName']) && isset($_POST['Email
         echo "Error in inserting new data";
         }
     }
-}
 ?>
 </body>
 </html>
