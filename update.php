@@ -62,7 +62,7 @@
     
     <p class="subtitle">Set-up your own profile so that people can know you better !</p>
         <!-- content -->
-      <form action="update-details.php" method="post" style=margin-top: 500px;>
+      <form action="update-details.php" method="post" style="margin-top: -10em;">
       <div class=" container text " style="max-width: 550px;">
         Full Name:<input type="text" name="fname" value="<?php echo $row['FullName']?>"><br>
       
