@@ -81,7 +81,7 @@
                         </div>
                       </div>
                       <div class="input-group">
-                          <input class="input--style-1" type="text" placeholder="Email" name="email">
+                          <input class="input--style-1" type="email" placeholder="Email" name="email">
                       </div>
                         <div class="row row-space">
                             <div class="col-2">                                
