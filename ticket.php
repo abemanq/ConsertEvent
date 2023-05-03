@@ -6,9 +6,10 @@
             // connect to database
             $conn = mysqli_connect('localhost', 'root', '', 'consert');
 
-            $num_sql = "SELECT COUNT(*) from customers";
+            $num_sql = "SELECT * from customers";
             $num_result = mysqli_query($conn, $num_sql);
-            $num_row = mysqli_fetch_array($num_result)[0];
+            // $num_row = mysqli_fetch_array($num_result)[0];
+            $num_row = mysqli_num_rows($num_result);
 
             //Query for admin set quota
             $quota = "SELECT * FROM quotas";
@@ -16,7 +17,7 @@
             $row = mysqli_fetch_row($quota_result);
             $max_row = $row[0];
 
-            if ($num_row > $max_row) {
+            if ($num_row >= $max_row) {
               //Display fail to buy ticket page
               header("Location: failreg.html");
             }   
