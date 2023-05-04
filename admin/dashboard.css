@@ -1,6 +1,6 @@
 /* CSS for the sidebar */
 body{
-  background-color: #3161d1;
+  background-color: #f5a770;
 }
 
 .sidebar {
@@ -10,7 +10,7 @@ body{
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #CCA43B;
+  background-color: #f35a46;
   overflow-x: hidden;
   padding-top: 20px;
   box-shadow: 1px 1px 2px rgb(0, 0, 0), 0 0 35px rgb(12, 10, 13), 0 0 5px rgb(21, 20, 21);

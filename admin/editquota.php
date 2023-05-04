@@ -6,27 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="stylesheet" href="dashboard.css">
-    <title>View Table</title>
+    <title>Edit Events</title>
     <style>
     </style>
     </head>
     <body>
+        <?php 
+            session_start();
+            $conn = mysqli_connect('localhost','root','','consert');
+        ?>
         <div class="topbar">
             <div class="sidebar">
                 <a href="dashboard.html">Dashboard</a>
-                <a href="table.html"  style="color: rgb(255, 255, 255);">Table View</a>
-                <a href="event.php">Edit Events</a>
+                <a href="table.html">View Table</a>
+                <a href="event.php" style="color: rgb(255, 255, 255);">Edit Events</a>
                 <div class="sideprofile">
-                    <img src="/ConsertEvent/image/profile.jpg" alt="gambar admin" class="sideimg">
+                    <img src="/image/profile.jpg" alt="gambar admin" class="sideimg">
                         <a href="adminlogin.html">
                             <button class="button" role="log out">Log Out</button>
                         </a>
                 </div>
             </div>
             <div class="main">
-                    <h1 class="title">View Table</h1>
+                    <h1 class="title">Edit Events</h1>
                 <center>
-                    <!-- content here -->
+                <h3 style="color:white;">Insert New Quota</h3>
+                    <form action="edit-quota-process.php" method='post'>
+                        <label for="" style="color:white;">New Quota</label><br><br>
+                        <input type="text" name="quota" placeholder="Input here..">
+                        <button type="submit">Edit</button>
+                    </form>
                 </center>
             </div>
         </div>

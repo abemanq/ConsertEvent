@@ -8,6 +8,31 @@
     <link rel="stylesheet" href="dashboard.css">
     <title>Edit Events</title>
     <style>
+        table {
+            background-color: #D0D38F;
+			border-collapse: collapse;
+			margin: auto;
+			font-family: Arial, sans-serif;
+			font-size: 14px;
+			width: 30%;
+			border: 1px #949D6A;
+			box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+		}
+		
+		th, td {
+			text-align: center;
+			padding: 10px;
+			border: 1px #949D6A;
+		}
+		
+		th {
+			background-color: #f2f2f2;
+			color: #949D6A;
+		}
+		
+		tr:nth-child(even) {
+			background-color: #949D6A;
+		}
     </style>
     </head>
     <body>
@@ -21,7 +46,7 @@
                 <a href="table.html">View Table</a>
                 <a href="event.php" style="color: rgb(255, 255, 255);">Edit Events</a>
                 <div class="sideprofile">
-                    <img src="/image/profile.jpg" alt="gambar admin" class="sideimg">
+                    <img src="/ConsertEvent/image/profile.jpg" alt="gambar admin" class="sideimg">
                         <a href="adminlogin.html">
                             <button class="button" role="log out">Log Out</button>
                         </a>
@@ -30,25 +55,56 @@
             <div class="main">
                     <h1 class="title">Edit Events</h1>
                 <center>
-                    <h3 style="color:white;">Concert Site Editor</h3>
-                    <?php 
-                    echo "<table border='3' style='color:white; font-size:20px;align='center'; cellspacing='0'; cellpadding='5';>";
-                    echo "<tr>Seat Category</tr>";
+                    <h3 style="color:white;">Concert Seat Editor</h3>
+                    <?php echo "<table style='margin-bottom:10px;'>
+	                    <thead>
+	                    	<tr>
+	                    		<th>Seat Category</th>
+	                    	</tr>
+	                    </thead>
+	                    <tbody>";
                         $seatsql = "SELECT * FROM seater";
                         $seat = mysqli_query($conn, $seatsql);
                         while($seat_row = mysqli_fetch_row($seat)){
-                            echo "<td>$seat_row[0]</td>";
-                        }
+                            echo "
+                            <tr>
+                                <td>$seat_row[0]</td>";                               
+                            echo" </tr>";
+                        }                                  
                     ?>
-                    </table>
-                    <form action="addseat.php" method="post">
-                        <button>Add Seat Section</button>
+                    </tbody>
+                    <table>
+                        <form action="addseat.php" method="post">
+                            <button>Add Seat Section</button>
                     </form>
                     <form action="deleteseat.php" method="post">
                         <button>Delete Seat Section</button>
                     </form>
                 </center>
+                <br>
+                <br>
+                <center>
+                    <h3 style="color:white;">Ticket Quota Editor</h3>
+                    <?php echo "<table style='margin-bottom:10px;'>
+	                    <thead>
+	                    	<tr>
+	                    		<th>Quota</th>
+	                    	</tr>
+	                    </thead>
+	                    <tbody>";
+                        $quotas = "SELECT * FROM quotas";
+                        $quota = mysqli_query($conn, $quotas);
+                        while($quota_row = mysqli_fetch_row($quota)){
+                        echo "<td>$quota_row[0]</td>";      
+                        }                        
+                    ?>
+                    </tbody>
+                    <table>
+                        <form action="editquota.php" method="post">
+                            <button>Edit Quota Section</button>
+                    </form>
+                </center>
             </div>
         </div>
     </body>
-</html>
+    </html>

@@ -6,7 +6,7 @@
   body {
     background-color: #F5F5F5;
     font-family: Arial, sans-serif;
-    background: url(/image/min.jpg);
+    background: url(/ConsertEvent/image/min.jpg);
     width: 100%;
     background-size: 120em;
     animation: fadeIn 1s ease-in both;
