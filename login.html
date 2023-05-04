@@ -9,26 +9,42 @@
 </head>
 
 <body>
-  <div class="container" style="width: 40%">
-    <div class="ravers"><h1>Welcome Ravers</h1></div>
-    <form action="logintest.php" method="POST">
-      <div class="mb-3 formlabel">
-        <label for="username" class="form-label">Username</label>
-        <input type="username" class="form-control" id="username" placeholder="abemanq" name="username" required>
-      </div>
-
-      <div class="mb-3">
-        <label for="password" class="form-label">Password</label>
-        <input type="password" class="form-control" id="password" aria-labelledby="passwordHelpBlock" name="password" required>
-      </div>
-
-      <div class="text-center">
-        <button class="btn btn btn-success btn-lg" type="submit" value="Submit">Login</button>
-      </div>
-    </form>
-    <div class="signupLink">
-      <label>Not a user? <a href="signup2.html">Click Here</a> to buy ticket</label>
+  <center>
+    <div class="back">
+      <a href="home.html">
+        <img src="image/backhome.png" alt="backtohome" style="width:35px;"/>
+      </a>
     </div>
-  </div>
+  </center>
+  <div class="center" style="width: 25%;">
+      <div class="ravers"><h1>User Login</h1></div>
+      <form action="logintest.php" method="POST" class="form">
+        <div class="form-group">
+          <input type="text" name="username" class="input" placeholder="Username">
+        </div>
+        <div class="form-group">
+          <input type="password" class="form-control" id="password" aria-labelledby="passwordHelpBlock" name="password" placeholder="Password" required>
+        </div>
+        <div class="form-group">
+          <center>
+            <a href="signup2.html" class="link" style="font-size: 13px;">Not Registered? Click here to register.</a>
+          </center>
+        </div>
+        <div class="button-group">
+          <center>
+          <button type="submit" class="button">Login</button>
+          <button type="reset" class="button">Cancel</button>
+        </center>
+        </div>
+      </form> 
+      <center>
+        <br>
+      <a href="admin/adminlogin.html">
+        <button>Admin Login</button>
+      </a>
+    </center>
+    </div>
 </body>
 </html>
+
+
