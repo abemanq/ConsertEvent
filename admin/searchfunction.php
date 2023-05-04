@@ -14,10 +14,9 @@
         <div class="topbar">
             <div class="sidebar">
                 <a href="dashboard.html" style="color: rgb(255, 255, 255);">Dashboard</a>
-                <a href="table.html">Table View</a>
                 <a href="event.html">Edit Events</a>
                 <div class="profile">
-                    <img src="image/profile.jpg" alt="gambar admin" class="sideimg">
+                <img src="/ConsertEvent/image/profile.jpg" alt="gambar admin" class="sideimg">
                         <a href="login.html">
                             <button class="button" role="log out">Log Out</button>
                         </a>
@@ -31,12 +30,18 @@
                 <form action="searchprocess.php" method="POST">
                     <input type="text" name="username" placeholder="Username">
                     <br>
+                    <br>
                     <input type="text" name="lastname" placeholder="Last Name">
+                    <br>
                     <br>
                     <input type="text" name="address" placeholder="Address">
                     <br>
                     <br>
+                    <input type="text" name="seatype" placeholder="Seat Category">
+                    <br>
+                    <br>
                     <button type="submit">Search</button>
+                    <button type="reset">Cancel</button>
                 </form>
                 </center>
             </div>

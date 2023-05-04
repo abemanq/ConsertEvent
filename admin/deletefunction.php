@@ -8,17 +8,41 @@
     <link rel="stylesheet" href="dashboard.css">
     <title>Dashboard</title>
     <style>
+        table {
+            background-color: #D0D38F;
+			border-collapse: collapse;
+			margin: auto;
+			font-family: Arial, sans-serif;
+			font-size: 14px;
+			width: 30%;
+			border: 1px #949D6A;
+			box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+		}
+		
+		th, td {
+			text-align: center;
+			padding: 10px;
+			border: 1px #949D6A;
+		}
+		
+		th {
+			background-color: #f2f2f2;
+			color: #949D6A;
+		}
+		
+		tr:nth-child(even) {
+			background-color: #949D6A;
+		}
     </style>
     </head>
     <body>
         <div class="topbar">
             <div class="sidebar">
-                <a href="dashboard.html" style="color: rgb(255, 255, 255);">Dashboard</a>
-                <a href="table.html">Table View</a>
-                <a href="event.html">Edit Events</a>
-                <div class="profile">
-                    <img src="/image/profile.jpg" alt="gambar admin" class="sideimg">
-                        <a href="login.html">
+            <a href="dashboard.html" style="color: rgb(255, 255, 255);">Dashboard</a>
+                <a href="event.php">Edit Events</a>
+                <div class="sideprofile">
+                    <img src="/ConsertEvent/image/profile.jpg" alt="gambar admin" class="sideimg">
+                        <a href="adminlogin.html">
                             <button class="button" role="log out">Log Out</button>
                         </a>
                 </div>
@@ -27,10 +51,10 @@
                     <h1 class="title">Dashboard</h1>
                 <center>
                 <?php
-                    echo "<table border='3' style='color:white; font-size:20px;align='center'; cellspacing='0'; cellpadding='5';'><tr>
-                        <td>Full Name</td>
-                        <td>Username</td>
-                        <td>Address</td>
+                    echo "<table><tr>
+                        <th>Full Name</th>
+                        <th>Username</th>
+                        <th>Address</th>
                         </tr>";
                     $con = mysqli_connect("localhost", "root", "","consert") or die("Cannot connect to server.".mysqli_error($con));
                     $sql = "SELECT * FROM userprofile";

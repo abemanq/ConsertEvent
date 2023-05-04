@@ -16,7 +16,7 @@
                 <a href="event.html">Edit Events</a>
                 <div class="container">
                     <div class="sideprofile">
-                        <img src="image/profile.jpg" alt="gambar admin" class="sideimg">
+                    <img src="/ConsertEvent/image/profile.jpg" alt="gambar admin" class="sideimg">
                         <a href="login.html">
                             <button class="button" role="log out">Log Out</button>
                         </a>

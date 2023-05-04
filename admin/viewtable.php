@@ -12,17 +12,14 @@
     </head>
     <body>
         <div class="topbar">
-            <div class="sidebar">
-                <a href="dashboard.html" style="color: rgb(255, 255, 255);">Dashboard</a>
-                <a href="table.html">Table View</a>
-                <a href="event.html">Edit Events</a>
-                <div class="container">
-                    <div class="sideprofile">
-                        <img src="image/profile.jpg" alt="gambar admin" class="sideimg">
-                        <a href="login.html">
+        <div class="sidebar">
+            <a href="dashboard.html" style="color: rgb(255, 255, 255);">Dashboard</a>
+                <a href="event.php">Edit Events</a>
+                <div class="sideprofile">
+                    <img src="/ConsertEvent/image/profile.jpg" alt="gambar admin" class="sideimg">
+                        <a href="adminlogin.html">
                             <button class="button" role="log out">Log Out</button>
                         </a>
-                    </div>
                 </div>
             </div>
             <div class="main">
@@ -33,15 +30,16 @@
                     <?php include 'dashboard.css'; ?>
                 </style>
                 <?php
-                    echo "<table border='3' style='color:white; font-size:20px;align='center'; cellspacing='0'; cellpadding='5'; background-color:white;'><tr>
-                        <td>First Name</td>
-                        <td>Last Name</td>
-                        <td>Email</td>
-                        <td>Phone Number</td>
-                        <td>Quantity Tix</td>
-                        <td>Username</td>
-                        <td>Seat Type</td>
-                        </tr>";
+                    echo "<table>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Email</th>
+                        <th>Phone Number</th>
+                        <th>Quantity Tix</th>
+                        <th>Username</th>
+                        <th>Seat Type</th>
+                    </tr>";
                     $con = mysqli_connect("localhost", "root", "","consert") or die("Cannot connect to server.".mysqli_error($con));
                     $sql = "SELECT * FROM customers";
                     $result = mysqli_query($con,$sql) or die("Cannot execute sql.");

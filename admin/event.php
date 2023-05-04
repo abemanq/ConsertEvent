@@ -43,7 +43,6 @@
         <div class="topbar">
             <div class="sidebar">
                 <a href="dashboard.html">Dashboard</a>
-                <a href="table.html">View Table</a>
                 <a href="event.php" style="color: rgb(255, 255, 255);">Edit Events</a>
                 <div class="sideprofile">
                     <img src="/ConsertEvent/image/profile.jpg" alt="gambar admin" class="sideimg">
